@@ -37,7 +37,7 @@
           })
           .catch(error => console.error(error));
 
-        const breedListUrl = `https://dog.ceo/api/breed/${breedSearchInput}/list`;
+        const breedListUrl = 'https://dog.ceo/api/breeds/list/all';
         fetch(breedListUrl)
           .then(response => response.json())
           .then(data => {
