@@ -25,7 +25,7 @@
       breedSearchForm.addEventListener('submit', event => {
         event.preventDefault();
         const breedSearchInput = document.getElementById('breed-search').value;
-        const breedSearchUrl = `https://dog.ceo/api/breed/${breedSearchInput}/images/random`;
+        const breedSearchUrl = 'https://dog.ceo/api/breeds/list/all';
         fetch(breedSearchUrl)
           .then(response => response.json())
           .then(data => {
@@ -37,7 +37,7 @@
           })
           .catch(error => console.error(error));
 
-        const breedListUrl = `https://dog.ceo/api/breed/${breedSearchInput}/list`;
+        const breedListUrl = 'https://dog.ceo/api/breeds/${breedSearchInput}/list`;
         fetch(breedListUrl)
           .then(response => response.json())
           .then(data => {
